@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gedulian/static/css/main.5274e2fd.css",
-    "main.js": "/gedulian/static/js/main.869efbdb.js",
+    "main.js": "/gedulian/static/js/main.5d05b330.js",
     "static/js/453.6264690d.chunk.js": "/gedulian/static/js/453.6264690d.chunk.js",
     "index.html": "/gedulian/index.html",
     "main.5274e2fd.css.map": "/gedulian/static/css/main.5274e2fd.css.map",
-    "main.869efbdb.js.map": "/gedulian/static/js/main.869efbdb.js.map",
+    "main.5d05b330.js.map": "/gedulian/static/js/main.5d05b330.js.map",
     "453.6264690d.chunk.js.map": "/gedulian/static/js/453.6264690d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5274e2fd.css",
-    "static/js/main.869efbdb.js"
+    "static/js/main.5d05b330.js"
   ]
 }
