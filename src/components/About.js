@@ -12,12 +12,12 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <User className="w-6 h-6 text-rose-100" />
-          <h2 className="text-3xl font-bold text-white">ABOUT</h2>
+          <h2 className="text-3xl font-bold text-white">ME?</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-             Fourth year Information Technology student from STI College Fairview with experience in building applications
+             A Fourth year Information Technology student from STI College Fairview with experience in building applications
              that solve real-world problems, game developing and many more with a strong
              foundation in Java and C#.
             </p>
