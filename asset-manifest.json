@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gedulian/static/css/main.0cbf7ad9.css",
+    "main.js": "/gedulian/static/js/main.3691ae44.js",
+    "static/js/453.6264690d.chunk.js": "/gedulian/static/js/453.6264690d.chunk.js",
+    "index.html": "/gedulian/index.html",
+    "main.0cbf7ad9.css.map": "/gedulian/static/css/main.0cbf7ad9.css.map",
+    "main.3691ae44.js.map": "/gedulian/static/js/main.3691ae44.js.map",
+    "453.6264690d.chunk.js.map": "/gedulian/static/js/453.6264690d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cbf7ad9.css",
+    "static/js/main.3691ae44.js"
+  ]
+}
