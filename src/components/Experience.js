@@ -9,7 +9,7 @@ export default function Experience() {
       tech: ["PHP", "JS" , "MySQL", "HTML", "CSS"],
       websiteLink: "https://kcsautorepairshop.com/",
       githubLink: "https://github.com/redoctober00/kcs-public",
-      image: "/images/KCS.png",
+      image: "https://media.discordapp.net/attachments/1317140929554939907/1448957040884973629/KCS.png?ex=693d25e6&is=693bd466&hm=e0d562a7911fb3057846e1d9a2edbafe54aa945d1459891364c9f5116c1342db&=&format=webp&quality=lossless&width=1663&height=800",
       videoLink: null
     },
     {
@@ -18,7 +18,7 @@ export default function Experience() {
     tech: ["Unity", "C#", "Animation System",],
     websiteLink: null,
     githubLink: "https://github.com/redoctober00/Game-Development",
-    image: "/images/game.png",
+    image: "https://media.discordapp.net/attachments/1317140929554939907/1448957040490840157/game.png?ex=693d25e6&is=693bd466&hm=592f5bc722b38083d353c4a731b41ed5bfac289de13c9aa2b461994d4c9de34c&=&format=webp&quality=lossless&width=1424&height=800",
     videoLink: "https://drive.google.com/file/d/1e6ou_q0LB7h4B_grUEbFzLey7clI-JgE/view?usp=sharing"
   },
     {
@@ -27,7 +27,7 @@ export default function Experience() {
     tech: ["CLoud", "Linux Server Setup",],
     websiteLink: null,
     githubLink: null,
-    image: "/images/cloud.png",
+    image: "https://media.discordapp.net/attachments/1317140929554939907/1448957040084123689/cloud.png?ex=693d25e6&is=693bd466&hm=d6c7e4c2ab7b90ff5d61fb3045244689016c1eb8d6b3e901c13b229e82a5a1a4&=&format=webp&quality=lossless&width=1328&height=606",
     videoLink: null
   }
   

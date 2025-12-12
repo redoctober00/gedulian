@@ -6,7 +6,7 @@ export default function Navigation({ activeSection, setActiveSection }) {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-bold">
           <span className="text-rose-400">&lt;</span>
-          <span className="text-white">PRTFL</span>
+          <span className="text-white">EARL</span>
           <span className="text-rose-400">/&gt;</span>
         </div>
         <div className="flex gap-6">
