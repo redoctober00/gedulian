@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="max-w-2xl">
           <p className="text-gray-300 mb-8 text-lg">
             Currently looking for internship opportunities. Feel free to reach out via
-            email or connect on social media!
+            email!
           </p>
           <div className="flex flex-col gap-4 mb-8">
             <a
