@@ -36,7 +36,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="py-20 px-6 border-t border-rose-900/30 bg-slate-950">
+    <section className="py-20 px-6 border-t border-rose-900/30">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <BookCheck className="w-6 h-6 text-rose-100" />
@@ -46,7 +46,7 @@ export default function Experience() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-rose-900/10 to-transparent border border-rose-100/30 rounded-lg hover:border-rose-100/50 transition-all group overflow-hidden"
+              className="bg-gradient-to-br from-rose-100/10 to-transparent border border-rose-100/30 rounded-lg hover:border-rose-100/50 transition-all group overflow-hidden"
             >
               {project.image && (
                 <div className="w-full h-48 overflow-hidden rounded-t-lg bg-gray-900">
@@ -68,7 +68,7 @@ export default function Experience() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs text-rose-100 bg-rose-900/20 px-2 py-1 rounded"
+                      className="text-xs text-rose-100 bg-rose-100/20 px-2 py-1 rounded"
                     >
                       {tech}
                     </span>
@@ -80,7 +80,7 @@ export default function Experience() {
                       href={project.websiteLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 bg-rose-900/30 border border-rose-500/30 rounded hover:bg-rose-900/50 hover:border-rose-100/50 transition-all text-sm text-rose-100"
+                      className="flex items-center gap-2 px-3 py-2 bg-rose-100/30 border border-rose-100/30 rounded hover:bg-rose-100/50 hover:border-rose-100/50 transition-all text-sm text-rose-100"
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span>Website</span>
@@ -91,7 +91,7 @@ export default function Experience() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 bg-rose-900/30 border border-rose-500/30 rounded hover:bg-rose-900/50 hover:border-rose-100/50 transition-all text-sm text-rose-100"
+                      className="flex items-center gap-2 px-3 py-2 bg-rose-100/30 border border-rose-100/30 rounded hover:bg-rose-100/50 hover:border-rose-100/50 transition-all text-sm text-rose-100"
                     >
                       <Github className="w-4 h-4" />
                       <span>GitHub</span>
@@ -102,7 +102,7 @@ export default function Experience() {
                       href={project.videoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 bg-rose-900/30 border border-rose-500/30 rounded hover:bg-rose-900/50 hover:border-rose-100/50 transition-all text-sm text-rose-100"
+                      className="flex items-center gap-2 px-3 py-2 bg-rose-100/30 border border-rose-100/30 rounded hover:bg-rose-100/50 hover:border-rose-100/50 transition-all text-sm text-rose-100"
                     >
                       <Video className="w-4 h-4" />
                       <span>Video</span>

@@ -19,7 +19,7 @@ export default function Contact() {
               href="mailto:johnearlgedulian@gmail.com"
               className="text-rose-100 hover:text-rose-300 transition-colors text-lg"
             >
-              johnearlgedulian@gmail.com
+              gedulian.305359@fairview.sti.edu.ph
             </a>
           </div>
           <div className="flex gap-4">
@@ -27,21 +27,21 @@ export default function Contact() {
               href="https://github.com/redoctober00"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-rose-100/20 border border-rose-500/30 rounded-lg hover:bg-rose-900/30 hover:border-rose-400/50 transition-all"
+              className="p-3 bg-rose-100/20 border border-rose-100/30 rounded-lg hover:bg-rose-100/30 hover:border-rose-400/50 transition-all"
             >
               <Github className="w-6 h-6 text-rose-100" /> 
             </a>
             <a
-              href="https://www.linkedin.com/in/john-earl-gedulian-ba982a368/"
+              href="https://www.linkedin.com/in/ejgedulian/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-rose-100/20 border border-rose-500/30 rounded-lg hover:bg-rose-900/30 hover:border-rose-400/50 transition-all"
+              className="p-3 bg-rose-100/20 border border-rose-100/30 rounded-lg hover:bg-rose-100/30 hover:border-rose-400/50 transition-all"
             >
               <Linkedin className="w-6 h-6 text-rose-100" />
             </a>
             <a
               href="mailto:johnearlgedulian@gmail.com"
-              className="p-3 bg-rose-100/20 border border-rose-500/30 rounded-lg hover:bg-rose-900/30 hover:border-rose-400/50 transition-all"
+              className="p-3 bg-rose-100/20 border border-rose-100/30 rounded-lg hover:bg-rose-100/30 hover:border-rose-400/50 transition-all"
             >
               <Mail className="w-6 h-6 text-rose-100" />
             </a>

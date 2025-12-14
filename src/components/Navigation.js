@@ -1,12 +1,24 @@
 import React from 'react';
+import Shuffle from '../shuffle';
 
 export default function Navigation({ activeSection, setActiveSection }) {
   return (
     <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-purple-900/30 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold">
+        <div className="text-xl font-bold flex items-center">
           <span className="text-rose-400">&lt;</span>
-          <span className="text-white">EARL</span>
+          <Shuffle 
+            text="EARL"
+            className="text-white"
+            tag="span"
+            triggerOnHover={true}
+            duration={0.5}
+            stagger={0.02}
+            loop={true}
+            loopDelay={3}
+            shuffleTimes={3}
+            scrambleCharset="!@#$%^&*()_+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+          />
           <span className="text-rose-400">/&gt;</span>
         </div>
         <div className="flex gap-6">
