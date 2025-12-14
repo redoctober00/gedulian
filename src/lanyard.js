@@ -14,7 +14,7 @@ import * as THREE from 'three';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], fov = 20, transparent = true }) {
+export default function Lanyard({ position, gravity = [0, -30, 0], fov, transparent = true }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
   useEffect(() => {
@@ -23,10 +23,14 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Responsive camera settings - offset x to position lanyard on the left
+  const cameraPosition = position || (isMobile ? [3, 0, 40] : [6, 0, 30]);
+  const cameraFov = fov || (isMobile ? 25 : 25);
+
   return (
     <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
       <Canvas
-        camera={{ position: position, fov: fov }}
+        camera={{ position: cameraPosition, fov: cameraFov }}
         dpr={[1, isMobile ? 1.5 : 2]}
         gl={{ alpha: transparent }}
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
@@ -69,7 +73,7 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
     </div>
   );
 }
-function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
+function Band({ maxSpeed = 35, minSpeed = 10, isMobile = false }) {
   const band = useRef(),
     fixed = useRef(),
     j1 = useRef(),
@@ -80,7 +84,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
     ang = new THREE.Vector3(),
     rot = new THREE.Vector3(),
     dir = new THREE.Vector3();
-  const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
+  const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 6, linearDamping: 6 };
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
   const [curve] = useState(
@@ -90,12 +94,13 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
+  const ropeLength = isMobile ? 2.5 : 1.3;
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], ropeLength]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], ropeLength]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], ropeLength]);
   useSphericalJoint(j3, card, [
     [0, 0, 0],
-    [0, 1.5, 0]
+    [0, 1, 0]
   ]);
 
   useEffect(() => {
@@ -129,16 +134,19 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
       band.current.geometry.setPoints(curve.getPoints(isMobile ? 16 : 32));
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
-      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
+      card.current.setAngvel({ x: ang.x * 0.98, y: ang.y - rot.y * 0.15, z: ang.z * 0.98 });
     }
   });
 
   curve.curveType = 'chordal';
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
+  const cardScale = isMobile ? 2.5 : 2.25;
+  const groupYPosition = isMobile ? 5 : 4;
+
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[0, groupYPosition, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
@@ -152,7 +160,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={2.25}
+            scale={cardScale}
             position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
@@ -182,11 +190,11 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
         <meshLineMaterial
           color="white"
           depthTest={false}
-          resolution={isMobile ? [1000, 2000] : [1000, 1000]}
+          resolution={isMobile ? [window.innerWidth, window.innerHeight] : [1000, 1000]}
           useMap
           map={texture}
           repeat={[-4, 1]}
-          lineWidth={1}
+          lineWidth={isMobile ? 3 : 1}
         />
       </mesh>
     </>
