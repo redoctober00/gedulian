@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/gedulian/static/css/main.028a8c2c.css",
-    "main.js": "/gedulian/static/js/main.9ba48ca0.js",
+    "main.css": "/gedulian/static/css/main.aadc907b.css",
+    "main.js": "/gedulian/static/js/main.e7433757.js",
     "static/js/453.6264690d.chunk.js": "/gedulian/static/js/453.6264690d.chunk.js",
     "static/media/card.glb": "/gedulian/static/media/card.88d71c4337b2c221e91b.glb",
+    "static/media/umaapoy.mp4": "/gedulian/static/media/umaapoy.fc26821e03aa79d1e203.mp4",
+    "static/media/m.png": "/gedulian/static/media/m.7c6bc1749291db7055ea.png",
     "static/media/KCS.png": "/gedulian/static/media/KCS.cb9aff3d8b06101069f2.png",
     "static/media/game.png": "/gedulian/static/media/game.d647170a5e6844f5f5c7.png",
     "static/media/cloud.png": "/gedulian/static/media/cloud.fed7ece9e7738ef2c0e9.png",
     "static/media/logo.png": "/gedulian/static/media/logo.406759f4c3b7cbc9376a.png",
     "index.html": "/gedulian/index.html",
-    "main.028a8c2c.css.map": "/gedulian/static/css/main.028a8c2c.css.map",
-    "main.9ba48ca0.js.map": "/gedulian/static/js/main.9ba48ca0.js.map",
+    "main.aadc907b.css.map": "/gedulian/static/css/main.aadc907b.css.map",
+    "main.e7433757.js.map": "/gedulian/static/js/main.e7433757.js.map",
     "453.6264690d.chunk.js.map": "/gedulian/static/js/453.6264690d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.028a8c2c.css",
-    "static/js/main.9ba48ca0.js"
+    "static/css/main.aadc907b.css",
+    "static/js/main.e7433757.js"
   ]
 }
