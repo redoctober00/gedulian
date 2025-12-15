@@ -10,11 +10,12 @@ export default function About() {
 
   return (
     <section className="py-20 px-6 border-t border-rose-100/30 relative overflow-hidden">
+      
       {/* Lanyard background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
       </div>
-  
+    
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex items-center gap-3 mb-8">
           <User className="w-6 h-6 text-rose-100" />

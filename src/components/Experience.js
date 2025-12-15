@@ -2,6 +2,7 @@ import React from 'react';
 import kcs from '../assets/KCS.png';
 import cloud from '../assets/cloud.png';
 import game from '../assets/game.png';
+import umaapoy from '../assets/umaapoy.mp4';
 import { BookCheck, ExternalLink, Github, Video } from 'lucide-react';
 
 export default function Experience() {
@@ -38,9 +39,12 @@ export default function Experience() {
   return (
     <section className="py-20 px-6 border-t border-rose-900/30">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 mb-8">
-          <BookCheck className="w-6 h-6 text-rose-100" />
-          <h2 className="text-3xl font-bold text-rose-100">Works</h2>
+        <div className="flex items-center justify-between gap-3 mb-8">
+          <div className="flex items-center gap-3">
+            <BookCheck className="w-6 h-6 text-rose-100" />
+            <h2 className="text-3xl font-bold text-rose-100">Works</h2>
+          </div>
+
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (

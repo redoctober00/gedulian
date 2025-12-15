@@ -5,7 +5,7 @@ export default function Navigation({ activeSection, setActiveSection }) {
   return (
     <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-purple-900/30 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold flex items-center shrink-0">
+        <div className="text-base font-bold flex items-center shrink-0">
           <span className="text-rose-400">&lt;</span>
           <Shuffle 
             text="EARL"
