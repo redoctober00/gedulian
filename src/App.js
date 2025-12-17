@@ -30,8 +30,8 @@ export default function Portfolio() {
       </div> */}
 
       <Waves
-  lineColor="#3d0101ff"
-  backgroundColor="rgba(48, 36, 100, 0.12)"
+  lineColor="#311c2fff"
+  backgroundColor="rgba(0, 0, 0, 0.12)"
   waveSpeedX={0.02}
   waveSpeedY={0.01}
   waveAmpX={40}

@@ -11,8 +11,8 @@ export default function Hero({ activeSection }) {
     },
     experience: {
       title: "Projects",
-      subtitle: "Experiences",
-      description: "Check out my latest projects showcasing full-stack capstone web development, game development, and cloud technologies."
+      subtitle: "Check Out",
+      description: "Latest projects showcasing full-stack capstone web development, game development, and cloud technologies."
     },
     contact: {
       title: "Let's Connect",

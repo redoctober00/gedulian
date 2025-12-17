@@ -40,7 +40,7 @@ export default function Contact() {
               <Linkedin className="w-6 h-6 text-rose-100" />
             </a>
             <a
-              href="mailto:johnearlgedulian@gmail.com"
+              href="mailto:gedulian.305359@fairview.sti.edu.ph"
               className="p-3 bg-rose-100/20 border border-rose-100/30 rounded-lg hover:bg-rose-100/30 hover:border-rose-400/50 transition-all"
             >
               <Mail className="w-6 h-6 text-rose-100" />
